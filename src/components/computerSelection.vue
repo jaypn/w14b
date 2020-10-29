@@ -2,7 +2,7 @@
     <div v-if="selection.name != undefined">
 
         <h1> computer selection</h1>
-        <img :src="selection.image" alt="user selection image">
+        <img width="100" :src="selection.image" alt="user selection image">
 
     </div>
 </template>

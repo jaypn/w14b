@@ -2,17 +2,24 @@
   <div>
     <h1>Welcom to the game</h1>
     <router-link to="/logout">
-      <button @click="logout">Log out</button>
+      <button class="btn" @click="logout">Log out</button>
     </router-link>
-
-    <div id="choices">
-      <button @click="select(0)">Rock</button>
-      <button @click="select(1)">Paper</button>
-      <button @click="select(2)">Scissors</button>
+ 
+  <!-- Add a v-if="$store.state.wins < 10" to this block to hide it when game is over -->
+    <div  id="choices">
+      <button class="btn" @click="select(0)">Rock</button>
+      <button class="btn" @click="select(1)">Paper</button>
+      <button class="btn" @click="select(2)">Scissors</button>
     </div>
+  <!-- Add a block here with a v-if to only show when the game is over -->
+  <!-- <div v-if="$store.state.wins == 10">
+    <h2>Game Over</h2>
+  </div> -->
     <scoreBoard />
+    <div id="imageWrapper">
     <userSelection />
     <computerSelction />
+    </div>
   </div>
 </template>
 
@@ -80,4 +87,8 @@ export default {
 </script>
 
 <style scoped>
+#imageWrapper{
+  display: flex;
+  justify-content: space-evenly;
+}
 </style>

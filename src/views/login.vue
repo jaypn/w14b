@@ -7,7 +7,7 @@
             <br>
             <input type="password" v-model="password">
             <br>
-            <button @click="login"> Login</button>
+            <button class="btn" @click="login"> Login</button>
         </form>
         <h2 v-if="error"> invalid information</h2>
     </div>
@@ -51,4 +51,5 @@ import cookies from "vue-cookies";
 </script>
 
 <style scoped>
+
 </style>
